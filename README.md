@@ -7,14 +7,14 @@ that enables users to call jitcdde with the new template.
 
 The wrapper can be used as following:
 
-DDE = customjitcdde(equations, helpers = helpers)
+&nbsp;DDE = customjitcdde(equations, helpers = helpers)
 
 The DDE object can then be modified similarly to jitcdde.
 
 Results can be accessed by:
 
-for itimepoint, timepoint in enumerate(timepoints):
-    state, helpers = DDE.integrate(timepoint)
+&nbsp;for itimepoint, timepoint in enumerate(timepoints):
+&nbsp;&nbsp;state, helpers = DDE.integrate(timepoint)
 
 where state and helpers are numpy arrays. 
 
