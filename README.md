@@ -45,6 +45,7 @@ for i, t in enumerate(timepoints):
 
 If you use this code in your research, teaching, or publications, please cite and reference this repository:
 
+```bibtex
 @misc{ZenosAI2025,
   author       = {Zenos.AI},
   title        = {jitcdde_Wrapper},
