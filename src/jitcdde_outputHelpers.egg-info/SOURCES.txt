@@ -2,8 +2,8 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
-src/jitcdde_helperOutput/CustomJiTCDDE.py
-src/jitcdde_helperOutput/__init__.py
+src/jitcdde_outputHelpers/CustomJiTCDDE.py
+src/jitcdde_outputHelpers/__init__.py
 src/jitcdde_outputHelpers.egg-info/PKG-INFO
 src/jitcdde_outputHelpers.egg-info/SOURCES.txt
 src/jitcdde_outputHelpers.egg-info/dependency_links.txt
