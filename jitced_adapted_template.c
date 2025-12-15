@@ -299,7 +299,8 @@ static PyObject * get_recent_state(dde_integrator const * const self, PyObject *
 		return NULL;
 	}
 	
-	npy_intp dims[1] = { {{n}} };
+	npy_intp dims[1] = { {{n}} }; // State
+
 	PyArrayObject * result = (PyArrayObject *)PyArray_SimpleNew(1, dims, TYPE_INDEX);
 	
 	anchor const w = *(self->last_anchor);
@@ -329,6 +330,16 @@ PyObject * n_dim_read_only_array_from_data(void * data) {
 	PyArray_CLEARFLAGS( (PyArrayObject *) result, NPY_ARRAY_WRITEABLE );
 	return result;
 }
+
+// Copy function above, to be sure that we will not break existing code
+npy_intp helpers_dim[1] = { {{number_of_helpers}} };
+
+PyObject * n_dim_read_only_array_from_data_helpers(void * data) {
+	PyObject * result = PyArray_SimpleNewFromData( 1, helpers_dim, TYPE_INDEX, data );
+	PyArray_CLEARFLAGS( (PyArrayObject *) result, NPY_ARRAY_WRITEABLE );
+	return result;
+}
+
 
 static PyObject * get_current_state(dde_integrator const * const self)
 {
@@ -483,7 +494,7 @@ static PyObject *
 get_helpers(dde_integrator const * const self)
 {
 	assert(self->current);
-	return n_dim_read_only_array_from_data(self->helpers);
+	return n_dim_read_only_array_from_data_helpers(self->helpers);
 }
 {% endif %}
 
