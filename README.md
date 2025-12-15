@@ -1,8 +1,8 @@
 # jitcdde_Wrapper
 
-A **wrapper** for [`jitcdde`](https://github.com/neurophysik/jitcdde) that enables **output of intermediate helper variables** alongside the main state.
+A **wrapper** for [`jitcdde`](https://github.com/neurophysik/jitcdde) that enables to **output the intermediate helper variables** alongside the states.
 
-The wrapper replaces the default C code template with a custom one, allowing access to helper expressions during integration.
+The wrapper replaces the default C code template with a custom one, allowing access to helper values after each integration step.
 
 ---
 
