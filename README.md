@@ -1,4 +1,4 @@
-# jitcdde_Wrapper
+# jitcdde-outputHelpers
 
 A **wrapper** for [`jitcdde`](https://github.com/neurophysik/jitcdde) that enables to **output the intermediate helper variables** alongside the states.
 
