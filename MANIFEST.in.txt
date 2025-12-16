@@ -1,1 +1,1 @@
-include src/jitcdde_outputHelpers/jitced_adapted_template.c
+recursive-include src *.c
